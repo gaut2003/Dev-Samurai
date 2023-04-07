@@ -1,0 +1,27 @@
+{
+  "name": "dev-samurai",
+  "version": "1.0.0",
+  "description": "Dev Samurai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umanghalok/Dev-Samurai.git"
+  },
+  "author": "Dev Samurai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umanghalok/Dev-Samurai/issues"
+  },
+  "homepage": "https://github.com/umanghalok/Dev-Samurai#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^7.0.3",
+    "nodemailer": "^6.9.1"
+  }
+}
