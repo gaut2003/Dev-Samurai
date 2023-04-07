@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const { dirname } = require("path");
 const path = require("path");
@@ -7,11 +8,13 @@ const {sendMail} = require("../utility/nodemailer");
 const Register = require('./models/register');
 const Reginster = require("./models/register");
 const { runInNewContext } = require("vm");
+const bcrypt = require("bcryptjs");
 const app = express();
 const port = process.env.PORT || 3000;
 
 const viewPath = path.join(__dirname, "../template/views");
 const partialsPath = path.join(__dirname, "../template/partials");
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.set("view engine", "hbs");
@@ -37,7 +40,8 @@ app.post("/signup", async(req,res) => {
                 password: req.body.password,
                 confirmpassword : req.body.confirmpassword
             })
-            
+            const token = await registerEmployee.generateAuthToken();
+            console.log(token);
             const registered = await registerEmployee.save();
             sendMail("signedup",req.body);
             res.status(201).render(index)
@@ -56,7 +60,9 @@ app.post("/signin", async (req,res) => {
         const email = req.body.email;
         const password = req.body.password;
         const userEmail = await Register.findOne({email : email});
-        if(userEmail.password == password){
+        const isMatch = await bcrypt.compare(password,userEmail.password);
+        const token = await registerEmployee.generateAuthToken();
+        if(isMatch){
             sendMail("signedin",req.body);
             res.status(201).render("index");
         }else{
