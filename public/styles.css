@@ -24,8 +24,13 @@ form {
     margin-left: 2em;
 }
 
-.navbar,
+.navbar {
+    background-color: rgba(101, 226, 42, 0.742);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+}
+
 .card {
+    background-color: rgba(149, 231, 231, 0.434);
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -57,8 +62,31 @@ h3 {
     font-size: 1.5em;
 }
 
+.logo-image {
+    width: 80px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.option {
+    color: black;
+    font-size: 1.2em
+}
 
 
+.sign {
+    color: black
+}
+
+.navbar .dropdown-toggle::after {
+    color: black;
+}
+
+.navbar-brand {
+    font-size: 1.4em;
+    font-weight: bolder;
+}
 
 /*------------------------- ABOUT CSS ----------------------------*/
 
