@@ -91,6 +91,10 @@ app.post("/signin", async (req,res) => {
 })
 app.get("/logout", auth, async(req,res) =>{
     try{
+    
+        req.user.tokens = req.user.tokens.filter((currElem) => {
+            return currElem.token != req.token;
+        })
         res.clearCookie('jwt');
         await req.user.save();
         res.render("signin");
