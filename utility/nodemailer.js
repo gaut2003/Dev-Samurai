@@ -6,20 +6,20 @@ module.exports.sendMail=async function sendMail(str,data) {
     port: 587,
     secure: false,
     auth: {
-      user: "agarwalg131@gmail.com",
-      pass: "vepxchbpxmxsdqus",
+      user: "devsamurai2023@gmail.com",
+      pass: "xdhgsziorjmhdtuk",
     },
   });
   if(str === 'signedup'){
     let info = await transporter.sendMail({
-      from: '"HackFest 👻" <agarwalg131@gmail.com>',
+      from: '"HackFest 👻" <devsamurai2023@gmail.com">',
       to: data.email,
       subject: `Hey ${data.firstname} ${data.lastname} Thank You for Signing up!`,
       html: "<b>Hola!You are now a part of Dev Samurai Team</b>",
     });
   }else{
     let info = await transporter.sendMail({
-      from: '"HackFest 👻" <agarwalg131@gmail.com>',
+      from: '"HackFest 👻" <devsamurai2023@gmail.com">',
       to: data.email,
       subject: `Thank You for Signing in!`,
       html: "<b>Welcome Back to the team of Dev Samurai's</b>",
