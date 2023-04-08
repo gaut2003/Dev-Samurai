@@ -1,0 +1,113 @@
+body {
+    background: #e8ebfa;
+    font-family: "Nunito", sans-serif;
+}
+
+
+form {
+    list-style-type: none;
+}
+
+.form-inline {
+    margin-right: 2em;
+}
+
+.gallery {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card {
+    margin-left: 2em;
+}
+
+.navbar,
+.card {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+.card:hover {
+    transform: translateY(-0.5em);
+}
+
+
+.emoji {
+    font-size: 80px;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+.card-text {
+    text-align: center;
+}
+
+h5,
+h6 {
+    text-align: center;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+
+
+
+/*------------------------- ABOUT CSS ----------------------------*/
+
+
+
+
+h2 {
+    text-align: center;
+}
+
+.about {
+    background-color: rgb(102, 102, 240);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container#about {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /*border: 2mm inset #333;*/
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+#ques {
+    font-size: 4rem;
+    color: rgb(87, 87, 247);
+}
+
+#highlight {
+    font-size: 4rem;
+    color: rgb(87, 87, 247);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+hr {
+    height: 0.5px;
+    border: none;
+    background-color: rgb(87, 87, 247);
+    margin: 5em 5em;
+}
