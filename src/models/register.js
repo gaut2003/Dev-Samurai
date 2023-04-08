@@ -54,5 +54,5 @@ volunteerSchema.pre("save", async function(next){
     next();
 })
 
-const Reginster = new mongoose.model("Register", volunteerSchema);
-module.exports = Reginster;
+const Register = new mongoose.model("Register", volunteerSchema);
+module.exports = Register;
