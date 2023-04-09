@@ -1,16 +1,21 @@
 require('dotenv').config();
+
 const express = require("express");
 const { dirname } = require("path");
+
 const path = require("path");
 const hbs = require("hbs");
 //const jwt = require("jsonwebtoken");
 require("./db/connect");
+
 const {sendMail} = require("../utility/nodemailer");
 const Register = require('./models/register');
 const Reginster = require("./models/register");
+
 const { runInNewContext } = require("vm");
 const bcrypt = require("bcryptjs");
 const auth = require("./middleware/auth");
+
 const cookieParser = require("cookie-parser");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,6 +25,7 @@ const partialsPath = path.join(__dirname, "../template/partials");
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(express.urlencoded({extended:false}));
 app.set("view engine", "hbs");
 app.set("views", viewPath);
